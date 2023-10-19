@@ -1,0 +1,8 @@
+__pycache__/
+.python-version
+
+*.pth
+examples/data/
+examples/results/
+tmp/
+.*.swp

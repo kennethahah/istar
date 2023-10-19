@@ -1,0 +1,55 @@
+[istar]
+target_pixel_size = 0.5  # micrometer
+padding_value = 255  # white
+network_depth = 4
+network_width = 256
+extractor_path = "checkpoints/"
+cache = true
+shift = true
+priority_genes_path = "data/markers/tls/genes.txt"
+n_top_genes = 1000
+n_states = 5
+output_path = "results/her2st/B/"
+
+[optimization]
+learning_rate = 1e-4
+batch_size = "auto"
+epochs = 400
+device = "cuda"
+
+# [analyses.visualize_genexp_spotlevel]
+# type = "visualize_genexp_spotlevel"
+# [analyses.visualize_genexp_spotlevel.options]
+# genes = ["ERBB2", "MS4A1"]
+
+# [analyses.genexp_superres]
+# type = "genexp_superres"
+# [analyses.genexp_superres.options]
+
+[analyses.generate_genexp_3d]
+type = "generate_genexp_3d"
+[analyses.generate_genexp_3d.options]
+learning_rate = 1e-4
+batch_size = 256
+epochs = 500
+device = "cuda"
+
+[slides]
+
+[slides.B1]
+data = "data/her2st/B1/"
+
+# [slides.B2]
+# data = "data/her2st/B2/"
+# 
+# [slides.B3]
+# data = "data/her2st/B3/"
+# 
+# [slides.B4]
+# data = "data/her2st/B4/"
+# 
+# [slides.B5]
+# data = "data/her2st/B5/"
+# 
+# [slides.B6]
+# data = "data/her2st/B6/"
