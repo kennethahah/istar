@@ -9,4 +9,4 @@ Inferring super-resolution tissue architecture by integrating spatial transcript
 
 The software package is written by Daiwei (David) Zhang
 and is under active development.
-Some utility codes are borrowed from XFuse.
+The transformer codes are based on HIPT, and some utility codes are based on XFuse.
